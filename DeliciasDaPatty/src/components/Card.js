@@ -25,8 +25,16 @@ class Card extends Component {
 const styles = StyleSheet.create({
   container: {
     margin: 10,
+    marginBottom: 30,
     borderRadius: 20,
-    shadowColor: '#DCDCDC',
+    shadowColor: "#A0A0A0",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.51,
+    shadowRadius: 13.16,    
+    elevation: 20,
     backgroundColor: '#DEA9A5',
     height: 300,
     width: 250,

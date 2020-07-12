@@ -9,12 +9,23 @@ class MainPage extends Component {
       <View>
         <Text style={styles.title}>Delicias da Patty</Text>
         <Text style={styles.subTitle}>Descubra as delicias!</Text>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ backgroundColor: '#FB8A7A' }}>
+
+        <View style={{ backgroundColor: '#DEA9A5' }}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <Text style={styles.categorias}>Sobremesas</Text>
+            <Text style={styles.categorias}>Bolos</Text>
+            <Text style={styles.categorias}>Bombom aberto</Text>
+            <Text style={styles.categorias}>Delicias!</Text>
+            <Text style={styles.categorias}>Delicias!</Text>
+          </ScrollView>
+          
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
             <Card />
             <Card />
             <Card />
             <Card />
           </ScrollView>
+        </View>          
       </View>
     );
   }
@@ -35,7 +46,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontWeight: 'bold',
     color: '#5C2D1E'
-  }
+  },
+
+  categorias: {
+    fontSize: 18, 
+    color: '#5C2D1E',
+    margin: 15
+  },
 });
 
 export default MainPage;
