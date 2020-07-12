@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Image, FlatList } from 'react-native';
+
+import Card from '../components/Card';
 
 class MainPage extends Component {
   render () {
     return (
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        <View style={styles.viewImage}>
-          <Image source={require('../../assets/imgs/img_bolo.jpg')} style={ {height: 300, width: 250, borderRadius: 15} } />
-          {/*<Text>Delicias da Patti :D</Text>*/}
-        </View>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </ScrollView>
       
     );
   }
-
 }
 
 const styles = StyleSheet.create({
-  viewImage: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  
+
+  card: {
+    borderRadius: 20,
+    shadowColor: '#DCDCDC',
+    backgroundColor: '#FF6961',
     height: 300,
-    width: 250,
-    borderRadius: 15
+    width: 250
   }
 });
 
