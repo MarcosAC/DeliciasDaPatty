@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, Button, TouchableHighlight } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class Card extends Component {
   render () {
@@ -10,9 +11,13 @@ class Card extends Component {
 
         <View style={styles.descriptionCard}> 
 
-          <Text style={styles.textCard}>Bolo de Choco</Text>          
+          <Text style={styles.textCard}>Bolo de Chocolate</Text>          
           <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
-            <View style={styles.button}></View>
+            <View style={styles.button}>
+              <View style={styles.iconButton}>
+                <Icon name="heart" size={18} color="white" />
+              </View>
+            </View>
           </TouchableHighlight> 
 
         </View>
@@ -52,7 +57,7 @@ const styles = StyleSheet.create({
 
   textCard: {
     flex: 3,
-    fontSize: 22,
+    fontSize: 19,
     fontWeight: 'bold',
     color: '#5C2D1E',
   },
@@ -71,6 +76,12 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'white'
   },
+
+  iconButton: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    },  
 });
 
 export default Card; 

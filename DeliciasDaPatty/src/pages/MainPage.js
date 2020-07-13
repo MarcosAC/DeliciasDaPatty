@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableHighlight, Image, FlatList } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import Card from '../components/Card';
 
@@ -28,22 +29,45 @@ class MainPage extends Component {
         </View >
           
         <View style={{ backgroundColor: '#DEA9A5', }}>
-          <View style={{ borderTopRightRadius: 40, backgroundColor: 'white' }}>
-            <Text style={styles.categorias}>Sobremesas</Text>
+          <View style={{ borderTopRightRadius: 40, backgroundColor: 'white', height: 135}}>
+            {/*<Text style={styles.categorias}>Sobremesas</Text> #FAFCF9 #FBFCFA*/}
 
-            <View style={{ flexDirection: 'row', justifyContent: 'space-around', }}>
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
-                  <View style={styles.button1} />
-              </TouchableHighlight>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 30 }}>
+              
+              <View style={styles.menuBottom}>
+                <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+                    <View style={styles.button1}>
+                      <View style={styles.iconButton}>
+                        <Icon name="file-alt" size={18} color="white" />
+                      </View>
+                    </View>
+                </TouchableHighlight>
+                <Text style={styles.textMenuBottom}>Menu</Text>
+              </View>
+              
+              <View style={styles.menuBottom}>
+                <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+                    <View style={styles.button}>
+                      <View style={styles.iconButton}>
+                        <Icon name="birthday-cake" size={18} color="white" />
+                      </View>
+                    </View>
+                </TouchableHighlight>
+                <Text style={styles.textMenuBottom}>Home</Text>
+              </View>
 
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
-                  <View style={styles.button} />
-              </TouchableHighlight>
-
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
-                  <View style={styles.button2} />
-              </TouchableHighlight>
-            </View>              
+              <View style={styles.menuBottom}>
+                <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+                    <View style={styles.button2}>
+                      <View style={styles.iconButton}>
+                        <Icon name="comments" size={18} color="white" />
+                      </View>
+                    </View>
+                </TouchableHighlight>
+                <Text style={styles.textMenuBottom}>Pedidos</Text>
+              </View>
+            </View>          
+                
           </View>
         </View>
                   
@@ -64,7 +88,7 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 24,    
     marginLeft: 10,
-    marginBottom: 20,
+    marginBottom: 10,
     fontWeight: 'bold',
     color: '#5C2D1E'
   },
@@ -73,6 +97,11 @@ const styles = StyleSheet.create({
     fontSize: 16, 
     color: '#5C2D1E',
     margin: 10
+  },
+
+  textMenuBottom: {
+    fontSize: 16,
+     color: '#5C2D1E'
   },
 
   button: {
@@ -101,7 +130,16 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'white'
   },
-  
+
+  menuBottom: {
+    alignItems: 'center'
+  },
+
+  iconButton: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    },  
 });
 
 export default MainPage;
