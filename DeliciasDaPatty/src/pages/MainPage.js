@@ -79,17 +79,17 @@ class MainPage extends Component {
 const styles = StyleSheet.create({ 
 
   title: {
-    fontSize: 36,
+    fontFamily: 'Cream Cake',
+    fontSize: 48,
     marginLeft: 10,
-    fontWeight: 'bold',
     color: '#5C2D1E'
   },
 
   subTitle: {
-    fontSize: 24,    
+    fontFamily: 'Cream Cake',
+    fontSize: 32,    
     marginLeft: 10,
     marginBottom: 10,
-    fontWeight: 'bold',
     color: '#5C2D1E'
   },
 
