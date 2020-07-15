@@ -41,14 +41,14 @@ const styles = StyleSheet.create({
     shadowRadius: 13.16,    
     elevation: 20,
     backgroundColor: '#DEA9A5',
-    height: 300,
-    width: 250,
+    height: 350,
+    width: 280,
   },
 
   viewImage: {
     resizeMode: 'stretch',
     height: 220,
-    width: 250,
+    width: 280,
     borderTopLeftRadius: 9,
     borderTopRightRadius:9,
     borderBottomRightRadius: 12,    
