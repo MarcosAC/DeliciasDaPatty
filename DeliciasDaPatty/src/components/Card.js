@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, Button, TouchableHighlight } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableHighlight } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class Card extends Component {
   render () {
     return (
       <View style={styles.container}>
-
         <Image style={styles.viewImage} source={require('../../assets/imgs/img_bolo.jpg')} />
 
-        <View style={styles.descriptionCard}> 
+        <View style={styles.descriptionCard}>
+          <Text style={styles.textCard}>Bolo de Chocolate</Text>     
 
-          <Text style={styles.textCard}>Bolo de Chocolate</Text>          
           <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
             <View style={styles.button}>
               <View style={styles.iconButton}>
@@ -19,9 +18,8 @@ class Card extends Component {
               </View>
             </View>
           </TouchableHighlight> 
-
         </View>
-
+        
       </View>
     ); 
   }
@@ -29,7 +27,7 @@ class Card extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    margin: 15,
     marginBottom: 30,
     borderRadius: 20,
     shadowColor: "#A0A0A0",
@@ -39,16 +37,16 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.51,
     shadowRadius: 13.16,    
-    elevation: 20,
+    elevation: 12,
     backgroundColor: '#DEA9A5',
     height: 350,
-    width: 280,
+    width: 250,
   },
 
   viewImage: {
     resizeMode: 'stretch',
-    height: 220,
-    width: 280,
+    height: 270,
+    width: 250,
     borderTopLeftRadius: 9,
     borderTopRightRadius:9,
     borderBottomRightRadius: 12,    
