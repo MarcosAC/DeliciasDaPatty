@@ -22,12 +22,13 @@ class Detail extends Component {
           </TouchableHighlight>          
         </View>
 
-       <View style={styles.containerDetails}>
-         <View style={{ flex:2, backgroundColor: '#FFFFFF', borderTopRightRadius: 40}}>
-            <View style={{ backgroundColor: '#FFFFFF',  }}></View>
+       <View style={styles.mainContainerIngredients}>
+         <View style={styles.containerIngredients}>
+            <View style={styles.containerTextIngredients}>
+              <Text style={styles.textIngredients}>Bolo de chocolate com cobertura de chocolate e morangos e com recheio de chantilly com morangos.</Text>
+            </View>
           </View>
         </View>
-
       </View>
     );
   }
@@ -89,10 +90,32 @@ const styles = StyleSheet.create({
     color: '#5C2D1E',
   },
 
-  containerDetails: {
-    flex:2, 
+  mainContainerIngredients: {
+    flex: 2,
     backgroundColor: '#DEA9A5'
   },
+
+  containerIngredients: {
+    flex:2,
+    backgroundColor: '#DEA9A5'
+  },
+
+  containerTextIngredients: { 
+    flex: 1, 
+    flexDirection: 'row', 
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF', 
+    paddingRight: '5%', 
+    paddingLeft: '5%',
+    borderTopRightRadius: 40
+  },
+
+  textIngredients: {
+    fontSize: 26,    
+    fontWeight: '700',
+    color: '#5C2D1E',
+    textAlign: 'justify'
+  }
 });
 
 export default Detail;
