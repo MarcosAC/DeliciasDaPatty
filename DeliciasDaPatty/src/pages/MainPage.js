@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableHighlight, Image, FlatList } from 'react-native';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Card from '../components/Card';
 
-function MainPage ({ navigation }) {
+
+function MainPage({ navigation }) {
   //render() {
     return (
       <View style={{ height: '100%', width: '100%', backgroundColor: 'white' }}>        
@@ -24,7 +25,7 @@ function MainPage ({ navigation }) {
             </ScrollView>
 
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
-              <Card />
+              <Card screenName='Detail' />
               <Card />
               <Card />
               <Card />

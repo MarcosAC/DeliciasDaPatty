@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableHighlight } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-class Card extends Component {
-  render () {
+function Card({ screenName }) {
+  const navigation = useNavigation();
+  //render () {
     return (
       <View style={styles.container}>
         <Image style={styles.viewImage} source={require('../../assets/imgs/img_bolo.jpg')} />
@@ -11,7 +13,7 @@ class Card extends Component {
         <View style={styles.descriptionCard}>
           <Text style={styles.textCard}>Bolo de Chocolate</Text>     
 
-          <TouchableHighlight onPress={() => {}} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
+          <TouchableHighlight onPress={() => navigation.navigate(screenName)} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
             <View style={styles.button}>
               <View style={styles.iconButton}>
                 <Icon name="heart" size={18} color="white" />
@@ -22,7 +24,7 @@ class Card extends Component {
         
       </View>
     ); 
-  }
+  //}
 }
 
 const styles = StyleSheet.create({

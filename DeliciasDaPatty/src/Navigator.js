@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 const Routers = () => {
   return (
     <Stack.Navigator initialRouteName='MainPage' screenOptions={{ headerShown: false }}>
-      <Stack.Screen name='MainPage' component={MainPage} />
+      <Stack.Screen name='MainPage' component={MainPage} />  
       <Stack.Screen name='Detail' component={Detail} />
     </Stack.Navigator>
   );
