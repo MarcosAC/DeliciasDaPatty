@@ -5,8 +5,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Card from '../components/Card';
 
-class MainPage extends Component {
-  render() {
+function MainPage ({ navigation }) {
+  //render() {
     return (
       <View style={{ height: '100%', width: '100%', backgroundColor: 'white' }}>        
         <View style={{ height: '15%', width: '100%', paddingLeft: 15 }}>
@@ -47,7 +47,7 @@ class MainPage extends Component {
               </View>
 
               <View style={styles.menuBottom}>
-                <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+                <TouchableHighlight onPress={() => navigation.navigate('Detail')} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
                     <View style={styles.button}>
                       <View style={styles.iconButton}>
                         <FontAwesome name="heart" size={26} color="white" />
@@ -72,7 +72,7 @@ class MainPage extends Component {
         </View>
       </View>
     );
-  }
+  //}
 }
 
 const styles = StyleSheet.create({ 

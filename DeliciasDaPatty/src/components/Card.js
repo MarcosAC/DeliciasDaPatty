@@ -11,7 +11,7 @@ class Card extends Component {
         <View style={styles.descriptionCard}>
           <Text style={styles.textCard}>Bolo de Chocolate</Text>     
 
-          <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
+          <TouchableHighlight onPress={() => {}} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
             <View style={styles.button}>
               <View style={styles.iconButton}>
                 <Icon name="heart" size={18} color="white" />
