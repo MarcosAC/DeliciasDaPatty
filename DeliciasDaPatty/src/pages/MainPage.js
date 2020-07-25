@@ -22,7 +22,7 @@ function MainPage({ navigation }) {
           <Text style={styles.categorias}>Delicias!</Text>
           <Text style={styles.categorias}>Delicias!</Text>
         </ScrollView>
-
+        
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Card screenName='Detail' />
           <Card />
