@@ -57,7 +57,7 @@ function MainPage({ navigation }) {
           <View style={styles.containerMenuBottom}>
 
             <View style={styles.menuBottom}>
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
                     <View style={styles.buttonDelicias}>
                       <View style={styles.iconButton}>
                         <FontAwesome name="birthday-cake" size={18} color="white" />
@@ -68,7 +68,7 @@ function MainPage({ navigation }) {
             </View>
 
             <View style={styles.menuBottom}>
-              <TouchableHighlight onPress={() => navigation.navigate('Detail')} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+              <TouchableHighlight onPress={() => navigation.navigate('Detail')} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
                   <View style={styles.buttonHome}>
                     <View style={styles.iconButton}>
                       <FontAwesome name="heart" size={22} color="white" />
@@ -78,7 +78,7 @@ function MainPage({ navigation }) {
             </View>
 
             <View style={styles.menuBottom}>
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={{ borderRadius: 60}} >
+              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
                   <View style={styles.buttonPedidos}>
                     <View style={styles.iconButton}>
                       <FontAwesome5 name="comments" size={18} color="white" />
@@ -154,6 +154,10 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+
+  menuBottomTouchable: { 
+    borderRadius: 60
   },
 
   buttonHome: {
