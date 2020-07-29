@@ -6,11 +6,19 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import Card from '../components/Card';
 
-const DATA = [
+const CARDS = [
   {id: 1, card: <Card screenName='Detail' />},
   {id: 2, card: <Card screenName='Detail' />},
   {id: 3, card: <Card screenName='Detail' />},
   {id: 4, card: <Card screenName='Detail' />}
+];
+
+const CATEGORIES = [
+  {id: 1, name: "Sobremesas"},
+  {id: 2, name: "Bolos"},
+  {id: 3, name: "Bombom aberto"},
+  {id: 4, name: "Delicias!"},
+  {id: 5, name: "Sobremesas"}
 ];
 
 function MainPage({ navigation }) { 
@@ -22,27 +30,24 @@ function MainPage({ navigation }) {
       </View>
 
       <View style={styles.containerCards}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <Text style={styles.categorias}>Sobremesas</Text>
-          <Text style={styles.categorias}>Bolos</Text>
-          <Text style={styles.categorias}>Bombom aberto</Text>
-          <Text style={styles.categorias}>Delicias!</Text>
-          <Text style={styles.categorias}>Delicias!</Text>
-        </ScrollView>
-        
-        {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <Card screenName='Detail' />
-          <Card />
-          <Card />
-          <Card />
-        </ScrollView> */}
+
+        <FlatList
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={CATEGORIES}
+          keyExtractor={i => `${i.id}`}
+          renderItem={({ item:c }) => {
+            return <Text style={styles.categories}>{c.name}</Text>
+          }} 
+        />
+
         <FlatList 
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          data={DATA}
+          data={CARDS}
           keyExtractor={i => `${i.id}`}
           renderItem={({ item:p }) => {
-            return p.id, p.card
+            return p.card
           }}
         />
       </View>
@@ -132,7 +137,7 @@ const styles = StyleSheet.create({
     color: '#5C2D1E',
   },
 
-  categorias: {
+  categories: {
     fontSize: 16, 
     color: '#5C2D1E',
     margin: 10
