@@ -1,13 +1,20 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, ScrollView, FlatList, StyleSheet, TouchableHighlight } from 'react-native';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import Card from '../components/Card';
 
-function MainPage({ navigation }) {
-  return (
+const DATA = [
+  {id: 1, card: <Card screenName='Detail' />},
+  {id: 2, card: <Card screenName='Detail' />},
+  {id: 3, card: <Card screenName='Detail' />},
+  {id: 4, card: <Card screenName='Detail' />}
+];
+
+function MainPage({ navigation }) { 
+  return (    
     <View style={styles.container}>        
       <View style={styles.containerTitle}>
         <Text style={styles.title}>Delicias da Patty</Text>
@@ -23,12 +30,21 @@ function MainPage({ navigation }) {
           <Text style={styles.categorias}>Delicias!</Text>
         </ScrollView>
         
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Card screenName='Detail' />
           <Card />
           <Card />
           <Card />
-        </ScrollView>
+        </ScrollView> */}
+        <FlatList 
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          data={DATA}
+          keyExtractor={i => `${i.id}`}
+          renderItem={({ item:p }) => {
+            return p.id, p.card
+          }}
+        />
       </View>
 
       <View style={styles.mainContainerMenuBottom}>
