@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 function Card({ screenName }) {
   const navigation = useNavigation();
-  //render () {
     return (
       <View style={styles.container}>
         <Image style={styles.viewImage} source={require('../../assets/imgs/img_bolo.jpg')} />
@@ -13,7 +12,7 @@ function Card({ screenName }) {
         <View style={styles.descriptionCard}>
           <Text style={styles.textCard}>Bolo de Chocolate</Text>     
 
-          <TouchableHighlight onPress={() => navigation.navigate(screenName)} underlayColor={'#FDE1DF'} style={{ flex: 1, borderRadius: 60}} >
+          <TouchableHighlight onPress={() => navigation.navigate(screenName)} underlayColor={'#FDE1DF'} style={styles.TouchableCard} >
             <View style={styles.button}>
               <View style={styles.iconButton}>
                 <Icon name="heart" size={18} color="white" />
@@ -24,7 +23,6 @@ function Card({ screenName }) {
         
       </View>
     ); 
-  //}
 }
 
 const styles = StyleSheet.create({
@@ -67,6 +65,11 @@ const styles = StyleSheet.create({
     marginTop: 5,
     padding: 5,
     alignItems: 'center',
+  },
+
+  TouchableCard: { 
+    flex: 1, 
+    borderRadius: 60
   },
 
   button: {

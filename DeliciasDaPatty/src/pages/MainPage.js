@@ -30,7 +30,6 @@ function MainPage({ navigation }) {
       </View>
 
       <View style={styles.containerCards}>
-
         <FlatList
           horizontal={true}
           showsHorizontalScrollIndicator={false}
