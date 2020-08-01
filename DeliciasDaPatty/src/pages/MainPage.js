@@ -56,7 +56,7 @@ function MainPage({ navigation }) {
           <View style={styles.containerMenuBottom}>
 
             <View style={styles.menuBottom}>
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
+              <TouchableHighlight onPress={() => navigation.navigate('ListSobremesas')} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
                     <View style={styles.buttonDelicias}>
                       <View style={styles.iconButton}>
                         <FontAwesome name="birthday-cake" size={18} color="white" />

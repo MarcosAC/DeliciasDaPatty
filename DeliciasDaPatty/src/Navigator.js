@@ -4,24 +4,18 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import MainPage from './pages/MainPage';
 import Detail from './pages/Detail';
+import ListSobremesas from './pages/ListSobremesas';
 
 const Stack = createStackNavigator();
 
-const Routers = () => {
+const Routes = () => {
   return (
     <Stack.Navigator initialRouteName='MainPage' screenOptions={{ headerShown: false }}>
       <Stack.Screen name='MainPage' component={MainPage} />  
       <Stack.Screen name='Detail' component={Detail} />
+      <Stack.Screen name='ListSobremesas' component={ListSobremesas} />
     </Stack.Navigator>
   );
 };
 
-const Navigator = () => {
-  return (
-    <NavigationContainer>
-      <Routers />
-    </NavigationContainer>
-  );
-};
-
-export default Navigator;
+export default Routes;

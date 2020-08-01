@@ -59,27 +59,51 @@ const renderItem = ({ item: s }) => {
         <View style={styles.container}>
             <View style={styles.containerImage}>
                 <Image style={styles.image} source={require('../../assets/imgs/img_bolo.jpg')} />
-            </View>
-
+            </View>  
             <View style={styles.containerText}>                
                 <Text style={styles.textSobremesa}>{s.sobremesa}</Text>                
                 <Text style={styles.textValor}>{s.valor}</Text>                               
             </View> 
-        </View>       
+        </View> 
     );
 };
 
 function ListSobremesas() {    
     return (
-        <FlatList
-          data={DATA}
-          keyExtractor={i => `${i.id}`}
-          renderItem={renderItem}
-        />
+        <>
+            <View style={styles.containerTitle}>
+                <Text style={styles.title}>Delicias da Patty</Text>
+                <Text style={styles.subTitle}>Descubra as delicias!</Text>
+            </View>
+
+            <FlatList
+                showsVerticalScrollIndicator={false}
+                data={DATA}
+                keyExtractor={i => `${i.id}`}
+                renderItem={renderItem}
+            />
+        </>
     );
 };
 
 const styles = StyleSheet.create({
+    containerTitle: {
+        backgroundColor: '#FFFFFF',
+        paddingLeft: 15
+      },
+
+    title: {
+      fontFamily: 'Cream Cake',
+      fontSize: 48,
+      color: '#5C2D1E'
+    },
+
+    subTitle: {
+      fontFamily: 'Cream Cake',
+      fontSize: 32,
+      color: '#5C2D1E',
+    },
+
     container: {
         flexDirection: "row",
         padding: 10,     
