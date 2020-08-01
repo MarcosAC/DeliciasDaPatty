@@ -1,99 +1,125 @@
 import React from 'react';
 import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
 
-function ListSobremesas() {    
+const DATA = [
+    {
+        id: 1,
+        sobremesa: "Bolo de Chocolate",
+        valor: "R$ 45,00"
+    },
+    {
+        id: 2,
+        sobremesa: "Bombom Aberto",
+        valor: "R$ 7,00"
+    },
+    {
+        id: 3,
+        sobremesa: "Bolo Piscina com Nutella",
+        valor: "R$ 45,00"
+    },
+    {
+        id: 4,
+        sobremesa: "Pavê de Leite Ninho com Morango",
+        valor: "R$ 7,00"
+    },
+    {
+        id: 5,
+        sobremesa: "Romeu e Julieta",
+        valor: "R$ 6,50"
+    },
+    {
+        id: 6,
+        sobremesa: "Bolo de Pote de Chocolate e Morango",
+        valor: "R$ 7,00"
+    },
+    {
+        id: 7,
+        sobremesa: "Bolo de Pote de Brigadeiro",
+        valor: "R$ 7,00"
+    },
+    {
+        id: 8,
+        sobremesa: "Bolo de Chocolate",
+        valor: "R$ 7,00"
+    },
+    {
+        id: 9,
+        sobremesa: "Bolo de Chocolate",
+        valor: "R$ 7,00"
+    },
+    {
+        id: 10,
+        sobremesa: "Bolo de Chocolate",
+        valor: "R$ 7,00"
+    },
+  ];
+
+const renderItem = ({ item: s }) => {
     return (
-        <View style={{flex: 1, 
-                      padding: 10,
-                      //justifyContent: 'space-between',                     
-                      //borderColor: 'blue',
-                      //borderWidth: 2,
-                      }}>
-
-            <View style={{ flexDirection: 'row',
-                           height: 130,
-                           padding: 10,
-                           alignItems: 'center',
-                           borderColor: '#FFFFFF',
-                           borderRadius: 10,
-                           borderWidth: 2,
-                           backgroundColor: '#DEA9A5'
-                        }}>
-
-                <View style={{ 
-                           width: 100,
-                           height: 100,
-                           borderColor: 'blue',
-                           borderWidth: 2,
-                           borderRadius: 50}}>
-
-                    {/* <Image style={{ 
-                                    width: '100%',
-                                    height: '100%' }} source={require('../../assets/imgs/img_bolo.jpg')} /> */}
-
-                </View>
-
-                    <View style={{ flex: 2,//width: '70%',
-                            height: 100, 
-                            borderColor: 'green',
-                            borderWidth: 1}}>
-
-                    </View>
+        <View style={styles.container}>
+            <View style={styles.containerImage}>
+                <Image style={styles.image} source={require('../../assets/imgs/img_bolo.jpg')} />
             </View>
 
-           
-           
-        </View>
-       
+            <View style={styles.containerText}>                
+                <Text style={styles.textSobremesa}>{s.sobremesa}</Text>                
+                <Text style={styles.textValor}>{s.valor}</Text>                               
+            </View> 
+        </View>       
+    );
+};
+
+function ListSobremesas() {    
+    return (
+        <FlatList
+          data={DATA}
+          keyExtractor={i => `${i.id}`}
+          renderItem={renderItem}
+        />
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        //flexDirection: 'row',
-        //marginVertical: 8,
-        //marginHorizontal: 16,
-        //padding: 10,
-        borderRadius: 15,/* 
-        shadowColor: "#A0A0A0",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.51,
-        shadowRadius: 13.16,    
-        elevation: 5, */
+        flexDirection: "row",
+        padding: 10,     
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: '#FFFFFF',
         backgroundColor: '#DEA9A5',
-        borderColor: 'black',
-        borderWidth: 2,
-        height: 300,
-        width: 40
+        marginVertical: 8,
+        marginHorizontal: 16,
+        elevation: 6,
     },
 
-    image: {
+    containerImage: {
         flex: 1,
-        height: 100,
+    },
+
+    image: { 
         width: 100,
+        height: 100,
         borderRadius: 50,
         borderColor: '#FFFFFF',
-        borderWidth: 2,
-    },
+        borderWidth: 2},
 
-    containerText: {
+    containerText: { 
         flex: 2,
-        flexDirection: 'column',
-        alignContent: 'center',
-        borderWidth: 1,
-        borderColor: 'red',
         marginLeft: 10,
+        justifyContent: 'center',
     },
 
-    text: {
+    textSobremesa: { 
         fontSize: 18,
         fontWeight: 'bold',
         color: '#5C2D1E'
     },
+
+    textValor: { 
+        fontSize: 22,
+        fontWeight: 'bold',
+        color: '#5C2D1E'
+    }
 });
 
  export default ListSobremesas;
