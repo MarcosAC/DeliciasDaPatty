@@ -30,7 +30,7 @@ function MainPage({ navigation }) {
       </View>
 
       <View style={styles.containerCards}>
-        <FlatList
+        {/* <FlatList
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           data={CATEGORIES}
@@ -38,7 +38,7 @@ function MainPage({ navigation }) {
           renderItem={({ item:c }) => {
             return <Text style={styles.categories}>{c.name}</Text>
           }} 
-        />
+        /> */}
 
         <FlatList 
           horizontal={true}
@@ -102,10 +102,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
 
-  containerTitle: {
-    backgroundColor: '#FFFFFF',
+  containerTitle: {    
     flex: 1,
-    paddingLeft: 15
+    justifyContent: 'center',
+    paddingLeft: 15,
+    backgroundColor: '#FFFFFF',
   },
   
   containerCards: {
@@ -120,8 +121,8 @@ const styles = StyleSheet.create({
   },
 
   containerMenuBottom: {
-    flexDirection: 'row',
-    alignItems: 'center'
+    flexDirection: 'row',    
+    marginTop: 10
   },
 
   title: {
