@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
+import { View, Text, FlatList, Image, TouchableHighlight, StyleSheet } from 'react-native';
+
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const DATA = [
     {
@@ -64,6 +66,17 @@ const renderItem = ({ item: s }) => {
                 <Text style={styles.textSobremesa}>{s.sobremesa}</Text>                
                 <Text style={styles.textValor}>{s.valor}</Text>                               
             </View> 
+
+            <View style={styles.bottom}>
+                <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
+                    <View style={styles.buttonPedidos}>
+                        <View style={styles.iconButton}>
+                        <FontAwesome5 name="comments" size={18} color="white" />
+                        </View>
+                    </View>
+                </TouchableHighlight>
+                <Text style={styles.textMenuBottom}>Pedidos</Text>
+            </View>            
         </View> 
     );
 };
@@ -90,7 +103,7 @@ const styles = StyleSheet.create({
     containerTitle: {
         backgroundColor: '#FFFFFF',
         paddingLeft: 15
-      },
+    },
 
     title: {
       fontFamily: 'Cream Cake',
@@ -143,7 +156,35 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 'bold',
         color: '#5C2D1E'
-    }
+    },
+
+    bottom: {
+        flex: 1,
+        height: 60,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        borderWidth: 2,
+        borderColor: 'black'
+    },
+
+    menuBottomTouchable: { 
+        borderRadius: 60
+    },
+
+    buttonPedidos: {
+        backgroundColor: '#DD9305',
+        height: 30,
+        width: 30,
+        borderRadius: 30,
+        borderWidth: 2,
+        borderColor: 'white'
+    },
+
+    iconButton: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
 
  export default ListSobremesas;
