@@ -61,25 +61,6 @@ const renderItem = ({ item: s }) => {
         <View style={styles.container}>
             <View style={styles.containerImage}>
                 <Image style={styles.image} source={require('../../assets/imgs/img_bolo.jpg')} />
-<<<<<<< HEAD
-            </View>  
-            <View style={styles.containerText}>                
-                <Text style={styles.textSobremesa}>{s.sobremesa}</Text>                
-                <Text style={styles.textValor}>{s.valor}</Text>                               
-            </View> 
-
-            <View style={styles.bottom}>
-                <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
-                    <View style={styles.buttonPedidos}>
-                        <View style={styles.iconButton}>
-                        <FontAwesome5 name="comments" size={18} color="white" />
-                        </View>
-                    </View>
-                </TouchableHighlight>
-                <Text style={styles.textMenuBottom}>Pedidos</Text>
-            </View>            
-        </View> 
-=======
             </View>
 
             <View style={styles.containerMainText}>
@@ -87,7 +68,7 @@ const renderItem = ({ item: s }) => {
                     <Text style={styles.textSobremesa}>{s.sobremesa}</Text>
                 </View>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={styles.containerTexValor}>
                     <View style={styles.containerText}>
                         <Text style={styles.textValor}>{s.valor}</Text>
                     </View>
@@ -102,13 +83,11 @@ const renderItem = ({ item: s }) => {
                 </View>
             </View>
         </View>
->>>>>>> teste
     );
 };
 
 function ListSobremesas() {
     return (
-<<<<<<< HEAD
         <>
             <View style={styles.containerTitle}>
                 <Text style={styles.title}>Delicias da Patty</Text>
@@ -122,13 +101,6 @@ function ListSobremesas() {
                 renderItem={renderItem}
             />
         </>
-=======
-        <FlatList
-            data={DATA}
-            keyExtractor={i => `${i.id}`}
-            renderItem={renderItem}
-        />
->>>>>>> teste
     );
 };
 
@@ -179,8 +151,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
 
-    containerText: {        
-        //flex: 2,
+    containerText: {  
         marginLeft: 10,
         justifyContent: 'center'
     },
@@ -191,41 +162,17 @@ const styles = StyleSheet.create({
         color: '#5C2D1E'
     },
 
+    containerTexValor: { 
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+
     textValor: {
         fontSize: 22,
         fontWeight: 'bold',
         color: '#5C2D1E'
     },
 
-<<<<<<< HEAD
-    bottom: {
-        flex: 1,
-        height: 60,
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        borderWidth: 2,
-        borderColor: 'black'
-    },
-
-    menuBottomTouchable: { 
-        borderRadius: 60
-    },
-
-    buttonPedidos: {
-        backgroundColor: '#DD9305',
-        height: 30,
-        width: 30,
-        borderRadius: 30,
-        borderWidth: 2,
-        borderColor: 'white'
-    },
-
-    iconButton: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-=======
     menuBottomTouchable: { 
         borderRadius: 50
     },
@@ -244,7 +191,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },  
->>>>>>> teste
 });
 
 export default ListSobremesas;

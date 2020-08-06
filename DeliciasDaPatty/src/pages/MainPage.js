@@ -30,16 +30,6 @@ function MainPage({ navigation }) {
       </View>
 
       <View style={styles.containerCards}>
-        {/* <FlatList
-          horizontal={true}
-          showsHorizontalScrollIndicator={false}
-          data={CATEGORIES}
-          keyExtractor={i => `${i.id}`}
-          renderItem={({ item:c }) => {
-            return <Text style={styles.categories}>{c.name}</Text>
-          }} 
-        /> */}
-
         <FlatList 
           horizontal={true}
           showsHorizontalScrollIndicator={false}
