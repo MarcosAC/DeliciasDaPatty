@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import MainPage from './pages/MainPage';
-import Detail from './pages/Detail';
+import Detail from './components/Detail';
 import ListSobremesas from './pages/ListSobremesas';
 
 const Stack = createStackNavigator();

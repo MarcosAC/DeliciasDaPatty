@@ -73,13 +73,13 @@ const renderItem = ({ item: s }) => {
                         <Text style={styles.textValor}>{s.valor}</Text>
                     </View>
 
-                    <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
+                    {/* <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
                         <View style={styles.buttonPedidos}>
                             <View style={styles.iconButton}>
                                 <FontAwesome5 name="comments" size={18} color="white" />
                             </View>
                         </View>
-                    </TouchableHighlight>
+                    </TouchableHighlight> */}
                 </View>
             </View>
         </View>
@@ -111,15 +111,15 @@ const styles = StyleSheet.create({
     },
 
     title: {
-      fontFamily: 'Cream Cake',
-      fontSize: 48,
-      color: '#5C2D1E'
+        fontFamily: 'Cream Cake',
+        fontSize: 48,
+        color: '#5C2D1E'
     },
 
     subTitle: {
-      fontFamily: 'Cream Cake',
-      fontSize: 32,
-      color: '#5C2D1E',
+        fontFamily: 'Cream Cake',
+        fontSize: 32,
+        color: '#5C2D1E',
     },
 
     container: {
@@ -147,11 +147,11 @@ const styles = StyleSheet.create({
     },
 
     containerMainText: {
-        flex: 2, 
+        flex: 2,
         justifyContent: 'center'
     },
 
-    containerText: {  
+    containerText: {
         marginLeft: 10,
         justifyContent: 'center'
     },
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         color: '#5C2D1E'
     },
 
-    containerTexValor: { 
+    containerTexValor: {
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
         color: '#5C2D1E'
     },
 
-    menuBottomTouchable: { 
+    menuBottomTouchable: {
         borderRadius: 50
     },
 
@@ -185,12 +185,12 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'white'
     },
-    
-      iconButton: {
+
+    iconButton: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },  
+    },
 });
 
 export default ListSobremesas;
