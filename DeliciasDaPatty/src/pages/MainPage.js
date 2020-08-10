@@ -56,7 +56,7 @@ function MainPage({ navigation }) {
               <Text style={styles.textMenuBottom}>Delicias</Text>
             </View>
 
-            <View style={styles.menuBottom}>
+            {/* <View style={styles.menuBottom}>
               <TouchableHighlight onPress={() => navigation.navigate('Detail')} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
                   <View style={styles.buttonHome}>
                     <View style={styles.iconButton}>
@@ -64,7 +64,7 @@ function MainPage({ navigation }) {
                     </View>
                   </View>
               </TouchableHighlight>
-            </View>
+            </View> */}
 
             <View style={styles.menuBottom}>
               <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
