@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, Image, TouchableHighlight, StyleSheet } from 'react-native';
 
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+//import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const DATA = [
     {
