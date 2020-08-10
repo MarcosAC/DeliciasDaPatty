@@ -10,17 +10,31 @@ function Card({ screenName }) {
         <Image style={styles.viewImage} source={require('../../assets/imgs/img_bolo.jpg')} />
 
         <View style={styles.descriptionCard}>
-          <Text style={styles.textCard}>Bolo de Chocolate</Text>     
+          <Text style={styles.textCard}>Bolo de Chocolate</Text>
 
-          <TouchableHighlight onPress={() => navigation.navigate(screenName)} underlayColor={'#FDE1DF'} style={styles.TouchableCard} >
-            <View style={styles.button}>
-              <View style={styles.iconButton}>
-                <Icon name="heart" size={18} color="white" />
-              </View>
-            </View>
-          </TouchableHighlight> 
-        </View>
-        
+          <View style={styles.containerButton}>
+            <TouchableHighlight onPress={() => navigation.navigate(screenName)} underlayColor={'#FDE1DF'} style={styles.TouchableCard} >
+              <View style={styles.button}>
+                <View style={styles.iconButton}>
+                  <Icon name="heart" size={14} color="white" />
+                </View>
+              </View>            
+            </TouchableHighlight>
+            <Text style={styles.textButton}>Detalhes</Text>
+          </View>
+
+          {/* <View style={styles.descriptionCard}>
+            <Text style={styles.textCard}>Bolo de Chocolate</Text>   
+
+            <TouchableHighlight onPress={() => navigation.navigate(screenName)} underlayColor={'#FDE1DF'} style={styles.TouchableCard} >
+                <View style={styles.button}>
+                  <View style={styles.iconButton}>
+                    <Icon name="heart" size={18} color="white" />
+                  </View>
+                </View>            
+              </TouchableHighlight>  
+          </View> */}
+        </View>         
       </View>
     ); 
 }
@@ -54,28 +68,45 @@ const styles = StyleSheet.create({
   },
 
   textCard: {
-    flex: 3,
-    fontSize: 19,
+    flex: 4,
+    fontSize: 18,
+    marginLeft: 5,
     fontWeight: 'bold',
     color: '#5C2D1E',
   },
 
   descriptionCard: {
     flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5
+    /*flexDirection: 'row',
     marginTop: 5,
     padding: 5,
-    alignItems: 'center',
+    alignItems: 'center',*/
+  },
+
+  menuBottom: {
+    flex: 1,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
+  containerButton: {
+    flex: 2,
+    alignItems: 'center'
   },
 
   TouchableCard: { 
-    flex: 1, 
-    borderRadius: 60
+    //flex: 1, 
+    borderRadius: 40,
   },
 
   button: {
     backgroundColor: '#E05A5A',
-    height: 60,
-    borderRadius: 60,
+    height: 50,
+    width: 50,
+    borderRadius: 25,    
     borderWidth: 2,
     borderColor: 'white'
   },
@@ -85,6 +116,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     },  
+
+  textButton: {
+    fontSize: 12,
+    color: '#5C2D1E',
+    fontWeight: 'bold'
+  }
 });
 
 export default Card; 
