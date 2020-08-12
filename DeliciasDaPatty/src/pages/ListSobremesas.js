@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, Image, TouchableHighlight, StyleSheet } from 'react-native';
 
-//import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const DATA = [
     {
@@ -73,13 +73,16 @@ const renderItem = ({ item: s }) => {
                         <Text style={styles.textValor}>{s.valor}</Text>
                     </View>
 
-                    {/* <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
-                        <View style={styles.buttonPedidos}>
-                            <View style={styles.iconButton}>
-                                <FontAwesome5 name="comments" size={18} color="white" />
+                    <View style={styles.containerButton}>
+                        <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
+                            <View style={styles.buttonPedidos}>
+                                <View style={styles.iconButton}>
+                                    <FontAwesome5 name="comments" size={18} color="white" />
+                                </View>
                             </View>
-                        </View>
-                    </TouchableHighlight> */}
+                        </TouchableHighlight>
+                        <Text style={styles.textPedidos}>Comprar</Text>
+                    </View>                    
                 </View>
             </View>
         </View>
@@ -173,6 +176,11 @@ const styles = StyleSheet.create({
         color: '#5C2D1E'
     },
 
+    containerButton: {
+        alignItems: 'center',
+        marginTop: 5
+    },
+
     menuBottomTouchable: {
         borderRadius: 50
     },
@@ -190,6 +198,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+
+    textPedidos: {
+        fontWeight: 'bold',
+        color: '#5C2D1E'
     },
 });
 
