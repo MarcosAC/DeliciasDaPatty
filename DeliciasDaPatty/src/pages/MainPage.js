@@ -13,14 +13,6 @@ const CARDS = [
   {id: 4, card: <Card screenName='Detail' />}
 ];
 
-const CATEGORIES = [
-  {id: 1, name: "Sobremesas"},
-  {id: 2, name: "Bolos"},
-  {id: 3, name: "Bombom aberto"},
-  {id: 4, name: "Delicias!"},
-  {id: 5, name: "Sobremesas"}
-];
-
 function MainPage({ navigation }) { 
   return (    
     <View style={styles.container}>        
@@ -161,18 +153,18 @@ const styles = StyleSheet.create({
 
   buttonDelicias: {
     backgroundColor: '#559057',
-    height: 60,
-    width: 60,
-    borderRadius: 30,
+    height: 70,
+    width: 70,
+    borderRadius: 35,
     borderWidth: 2,
     borderColor: '#FFFFFF'
   },
 
   buttonPedidos: {
     backgroundColor: '#DD9305',
-    height: 60,
-    width: 60,
-    borderRadius: 30,
+    height: 70,
+    width: 70,
+    borderRadius: 35,
     borderWidth: 2,
     borderColor: 'white'
   },
