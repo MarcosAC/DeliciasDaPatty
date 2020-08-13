@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableHighlight, Linking } from 'react-native';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -59,7 +59,12 @@ function MainPage({ navigation }) {
             </View> */}
 
             <View style={styles.menuBottom}>
-              <TouchableHighlight onPress={() => ({})} underlayColor={'#FDE1DF'} style={styles.menuBottomTouchable} >
+              <TouchableHighlight 
+                style={styles.menuBottomTouchable}
+                underlayColor={'#FDE1DF'}
+                onPress={() => {
+                  Linking.openURL('http://api.whatsapp.com/send?phone=5531999999999');
+                }}>
                   <View style={styles.buttonPedidos}>
                     <View style={styles.iconButton}>
                       <FontAwesome5 name="comments" size={18} color="white" />
