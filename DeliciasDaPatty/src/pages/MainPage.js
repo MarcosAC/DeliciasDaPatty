@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableHighlight, Linking } from 'react-native';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import SplashScreen from 'react-native-splash-screen';
 
 import Card from '../components/Card';
 
@@ -14,6 +15,11 @@ const CARDS = [
 ];
 
 function MainPage({ navigation }) { 
+
+  useEffect(() => {
+    SplashScreen.hide();
+  },[]);
+  
   return (    
     <View style={styles.container}>        
       <View style={styles.containerTitle}>

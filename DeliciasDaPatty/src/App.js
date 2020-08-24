@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Navigator from './Navigator';
-//import Carrossel from './components/Carrossel';
+//import SplashScreen from './components/SplashScreen';
 
 export default class App extends Component {
   render() {
-    return(
+    return(      
       <NavigationContainer>
+        {/*<SplashScreen />*/}
         <Navigator />
       </NavigationContainer>
     );
