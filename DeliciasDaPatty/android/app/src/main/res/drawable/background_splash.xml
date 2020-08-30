@@ -4,9 +4,9 @@
     <item android:drawable="@color/white"/>
 
     <item
-        android:width="200dp"
-        android:height="200dp"
-        android:drawable="@mipmap/icon"
+        android:width="300dp"
+        android:height="300dp"
+        android:drawable="@mipmap/img_splash"
         android:gravity="center" />
 
 </layer-list>
